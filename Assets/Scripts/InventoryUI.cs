@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
-    public Inventory playerInventory;
+    public InventorySO playerInventory;
     public TMP_Text inventoryText;
 
     void Start()

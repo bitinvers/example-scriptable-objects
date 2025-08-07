@@ -14,9 +14,14 @@ public class InventorySlot
     }
 }
 
-
-
 public class Inventory : MonoBehaviour
+{
+    public InventorySO inventory;
+}
+
+
+[CreateAssetMenu(fileName = "NewInventory", menuName = "Inventory/Inventory")]
+public class InventorySO : ScriptableObject
 {
     public List<InventorySlot> slots = new List<InventorySlot>();
 
@@ -70,5 +75,10 @@ public class Inventory : MonoBehaviour
     private void UpdateInventoryUI()
     {
         if (OnInventoryChanged != null) OnInventoryChanged.Invoke();
+    }
+
+    private void Reset()
+    {
+        slots.Clear();
     }
 }

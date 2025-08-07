@@ -16,7 +16,8 @@ public class ItemPickup : MonoBehaviour
             }
             if (inventory)
             {
-                inventory.AddItem(itemData, quantity);
+                InventorySO invSO = inventory.inventory;
+                invSO.AddItem(itemData, quantity);
             }
             else
             {

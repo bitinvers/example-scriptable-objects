@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ea2f2a2646b974b91afe996febbbea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slots: []
+  inventory: {fileID: 11400000, guid: ea6700d3618543441a8e12e6a8864e77, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -840,7 +840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ad527df22715b4193d14776ad948c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInventory: {fileID: 323605417}
+  playerInventory: {fileID: 11400000, guid: ea6700d3618543441a8e12e6a8864e77, type: 2}
   inventoryText: {fileID: 735361230}
 --- !u!114 &735361230
 MonoBehaviour:
