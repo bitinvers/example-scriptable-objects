@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewConsumable", menuName = "Inventory/Item (Consumable)")]
-public class ConsumableItem : ItemObject
+public class ConsumableItem : ItemObjectSO
 {
     public int healAmount;
     public bool isStackable = true;

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
 {
-    public ItemObject itemData;
+    public ItemObjectSO itemData;
     public int quantity = 1;
 
     private void OnTriggerEnter(Collider other)

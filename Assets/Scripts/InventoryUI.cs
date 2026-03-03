@@ -66,7 +66,7 @@ public class InventoryUI : MonoBehaviour
         }
     }
 
-    private void OnClickUse(ItemObject item)
+    private void OnClickUse(ItemObjectSO item)
     {
         Debug.Log($"Used item {item.name}");
         playerInventory.RemoveItem(item, 1);

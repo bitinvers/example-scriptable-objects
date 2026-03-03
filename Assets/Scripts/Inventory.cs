@@ -4,10 +4,10 @@ using System.Collections.Generic;
 [System.Serializable]
 public class InventorySlot
 {
-    public ItemObject item;
+    public ItemObjectSO item;
     public int quantity;
 
-    public InventorySlot(ItemObject item, int quantity)
+    public InventorySlot(ItemObjectSO item, int quantity)
     {
         this.item = item;
         this.quantity = quantity;
@@ -25,7 +25,7 @@ public class InventorySO : ScriptableObject
 {
     public List<InventorySlot> slots = new List<InventorySlot>();
 
-    public void AddItem(ItemObject item, int quantity = 1)
+    public void AddItem(ItemObjectSO item, int quantity = 1)
     {
         if (item == null) return;
         InventorySlot slot = slots.Find(s => s.item == item);
@@ -51,13 +51,13 @@ public class InventorySO : ScriptableObject
         UpdateInventoryUI();
     }
 
-    public int GetItemCount(ItemObject item)
+    public int GetItemCount(ItemObjectSO item)
     {
         InventorySlot slot = slots.Find(s => s.item == item);
         return slot != null ? slot.quantity : 0;
     }
 
-    public bool RemoveItem(ItemObject item, int quantity = 1)
+    public bool RemoveItem(ItemObjectSO item, int quantity = 1)
     {
         InventorySlot slot = slots.Find(s => s.item == item);
         if (slot == null) return false;
